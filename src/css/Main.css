@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@import "tailwindcss";
+
+*{
+  font-family: Outfit;
+}
+
+/* Fuentes Importadas */
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+a.active hr {
+  display: block;
+}
+.imagen-de-fondo {
+  background-image: url(../assets/main-hero-home.jpg);
+   background-position: top center;
+}
+.icono-adorno-cuchillos::after {
+  content: url(../assets/icons/icon_adorno-cuchillos.webp);
+  margin-top: 20px;
+}
+
+  @media (max-width:640px) {
+    a.active {
+      background-color: black;
+      color: white
+    }
+  }
