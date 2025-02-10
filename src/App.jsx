@@ -21,7 +21,7 @@ function App() {
         <Route path="/nosotros" element={<PaginaNosotros />} />
         <Route path="/contacto" element={<PaginaContacto />} />
         <Route path="/productos" element={<PaginaProductos />} />
-        <Route path="/prueba/:nombre" element={<PaginaProducto />} />
+        <Route path="/producto/:nombreProducto" element={<PaginaProducto />} />
       </Routes>
 
       <Footer />

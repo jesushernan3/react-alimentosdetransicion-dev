@@ -4,7 +4,7 @@ import { ContextoTienda } from "../context/ContextoTienda";
 import { assets } from "../assets/assets";
 
 const PaginaProducto = () => {
-  const { nombre } = useParams();
+  const { nombreProducto } = useParams();
   const { productos } = useContext(ContextoTienda);
   const [productoData, setProductoData] = useState(false);
   const [imagen, setImagen] = useState("");
@@ -40,7 +40,6 @@ const PaginaProducto = () => {
             })}
             <p>aqui hirian las fotos</p>;
           </div>
-          <img src={assets.imagenProdGalleta01} alt="" />
         </div>
       </div>
     </div>
