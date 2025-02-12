@@ -10,6 +10,8 @@ import medallonDeAvena from "./productos/medallones/Medallones-garbanzo-avena.jp
 import medallonDeBrocoli from "./productos/medallones/medallones-brocoli.jpg";
 import bannerGeneral from "./banner-gral.jpg";
 import bannerInicio from "./main-hero-home.jpg";
+import iconoStar from "./icons/icon_star.png";
+import iconoStarDesvanecida from "./icons/icon_star_desvanecida.png";
 import iconoLupa from "./icons/icon_lupa.png";
 import iconoBolsa from "./icons/icon_bolsa.png";
 import iconoUsuario from "./icons/icon_usuario.png";
@@ -41,6 +43,8 @@ export const assets = {
   iconoBolsa,
   iconoUsuario,
   iconoExchange,
+  iconoStar,
+  iconoStarDesvanecida,
   iconoTilde,
   iconoSoporte,
   iconoHamburguesa,
@@ -104,6 +108,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeArroz],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Medallones",
     subCategoria: "Sin gluten",
     precio: 102,
@@ -114,6 +119,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeCalabaza],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Medallones",
     subCategoria: "con gluten",
     precio: 125,
@@ -124,6 +130,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeGarbanzo],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Medallones",
     subCategoria: "Sin gluten",
     precio: 778,
@@ -134,6 +141,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeLenteja],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Galletitas",
     subCategoria: "con gluten",
     precio: 888,
@@ -144,6 +152,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeVerdura],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Galletitas",
     subCategoria: "sin sal",
     precio: 999,
@@ -154,6 +163,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeVegetales],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Galletitas",
     subCategoria: "sin sal",
     precio: 147,
@@ -164,6 +174,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeAvena],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Postres",
     subCategoria: "sin sal",
     precio: 555,
@@ -174,6 +185,7 @@ export const productos = [
     descripcion:
       "aqui ira una descripcion de lo que es el producto en cuestion",
     imagen: [medallonDeBrocoli],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Postres",
     subCategoria: "sin sal",
     precio: 666,
@@ -189,6 +201,7 @@ export const productos = [
       imagenProdGalleta03,
       imagenProdGalleta04,
     ],
+    tamaños: ["chico", "mediano", "grande"],
     categoria: "Galletas",
     subCategoria: "con chocolate",
     precio: 1092,

@@ -26,7 +26,9 @@ a.active hr {
   content: url(../assets/icons/icon_adorno-cuchillos.webp);
   margin-top: 20px;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
   @media (max-width:640px) {
     a.active {
       background-color: black;
