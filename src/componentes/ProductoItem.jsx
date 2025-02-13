@@ -2,7 +2,14 @@ import React, { useCallback, useContext } from "react";
 import { ContextoTienda } from "../context/ContextoTienda";
 import { Link } from "react-router-dom";
 
-const ProductoItem = ({ id, imagen, nombre, precio, descripcion }) => {
+const ProductoItem = ({
+  id,
+  imagen,
+  nombre,
+  precio,
+  descripcion,
+  categoria,
+}) => {
   const { currency } = useContext(ContextoTienda);
 
   return (

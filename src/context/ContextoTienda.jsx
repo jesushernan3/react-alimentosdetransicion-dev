@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { productos } from "../assets/assets";
 
 export const ContextoTienda = createContext();
@@ -8,6 +8,27 @@ const ProveedorContextoTienda = (props) => {
   const valor_envio = 10;
   const [buscar, setBuscar] = useState("");
   const [mostrarBuscar, setMostrarBuscar] = useState(false);
+  const [carritoItems, setCarritoItems] = useState({});
+
+  const agregarACarrito = async (itemId, tamaño) => {
+    let carritoData = structuredClone(carritoItems);
+
+    if (carritoData[itemId]) {
+      if (carritoData[itemId][tamaño]) {
+        carritoData[itemId][tamaño] += 1;
+      } else {
+        carritoData[itemId][tamaño] = 1;
+      }
+    } else {
+      carritoData[itemId] = {};
+      carritoData[itemId][tamaño] = 1;
+    }
+    setCarritoItems(carritoData);
+  };
+
+  useEffect(() => {
+    console.log(carritoItems);
+  }, [carritoItems]);
 
   const valor = {
     productos,
@@ -17,6 +38,8 @@ const ProveedorContextoTienda = (props) => {
     setBuscar,
     mostrarBuscar,
     setMostrarBuscar,
+    carritoItems,
+    agregarACarrito,
   };
 
   return (

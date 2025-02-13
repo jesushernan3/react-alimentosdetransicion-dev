@@ -2,10 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ContextoTienda } from "../context/ContextoTienda";
 import { assets } from "../assets/assets";
+// import ProductosRelacionados from "../componentes/ProductosRelacionados";
 
 const PaginaProducto = () => {
   const { nombreProducto } = useParams();
-  const { productos, currency } = useContext(ContextoTienda);
+  const { productos, currency, agregarACarrito } = useContext(ContextoTienda);
   const [productoData, setProductoData] = useState(false);
   const [imagen, setImagen] = useState("");
   const [tamaño, setTamaño] = useState("");
@@ -19,7 +20,6 @@ const PaginaProducto = () => {
       }
     });
   };
-  console.log(productoData.tamaños);
 
   useEffect(() => {
     traerProductoData();
@@ -80,7 +80,10 @@ const PaginaProducto = () => {
               ))}
             </div>
           </div>
-          <button className="bg-black text-white px-8 py-3 text-small active:bg-gray-700">
+          <button
+            onClick={() => agregarACarrito(productoData.id, tamaño)}
+            className="bg-black text-white px-8 py-3 text-small active:bg-gray-700"
+          >
             Agregar al Carrito
           </button>
           <hr className="text-gray-400 mt-8 sm:w-4/5" />
@@ -98,7 +101,7 @@ const PaginaProducto = () => {
           <b className="border px-5 py-3 text-sm">Descripción</b>
           <p className="border px-5 py-3 text-sm">Reseñas (122)</p>
         </div>
-        <div className="flex flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
           <p>
             DESCRIPCION ipsum dolor sit amet consectetur adipisicing elit.
             Dolores ullam saepe sunt possimus fuga, unde consectetur voluptatum,
@@ -113,6 +116,12 @@ const PaginaProducto = () => {
           </p>
         </div>
       </div>
+
+      {/* -------- Productos Relacionados(CORREGIR) ---------- */}
+      {/* <ProductosRelacionados
+        categoria={productoData.categoria}
+        subCategoria={productoData.subCategoria}
+      /> */}
     </div>
   ) : (
     <div className="opacity-0"></div>
