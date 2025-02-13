@@ -3,7 +3,7 @@ import { ContextoTienda } from "../context/ContextoTienda";
 import { assets, categorias } from "../assets/assets";
 import HeroGeneral from "../componentes/HeroGeneral";
 import Titulos from "../componentes/Titulos";
-import ProductoItem from "../componentes/ProductoItem";
+import ProductoItem from "../componentes/FichaProducto";
 
 function PaginaProductos() {
   const { productos, buscar, mostrarBuscar } = useContext(ContextoTienda);

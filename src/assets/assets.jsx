@@ -66,6 +66,86 @@ export const assets = {
   imagenProdGalleta04,
 };
 
+export const categoriasRecetas = [
+  {
+    id: 1,
+    nombre: "Aderezos",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "aderezos",
+    subCategoria: "liquidos",
+  },
+  {
+    id: 2,
+    nombre: "Salsas",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "salsas",
+    subCategoria: "liquidos",
+  },
+  {
+    id: 3,
+    nombre: "Batidos",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "batidos",
+    subCategoria: "liquidos",
+  },
+  {
+    id: 4,
+    nombre: "Bebidas",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "bebidas",
+    subCategoria: "liquidos",
+  },
+  {
+    id: 5,
+    nombre: "Ensaladas",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "ensaladas",
+    subCategoria: "solidos",
+  },
+  {
+    id: 6,
+    nombre: "Galletas",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "galletas",
+    subCategoria: "masas",
+  },
+  {
+    id: 7,
+    nombre: "Platos Principales",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "platos-principales",
+    subCategoria: "platos",
+  },
+  {
+    id: 8,
+    nombre: "Medallones",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "medallones",
+    subCategoria: "solidos",
+  },
+  {
+    id: 9,
+    nombre: "Postres",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "postres",
+    subCategoria: "solidos",
+  },
+  {
+    id: 10,
+    nombre: "Sopas",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "sopas",
+    subCategoria: "liquidos",
+  },
+  {
+    id: 11,
+    nombre: "Cremas",
+    imgagen: [imagenCorazonGarbanzos],
+    categoria: "cremas",
+    subCategoria: "liquidos",
+  },
+];
+
 export const categorias = [
   {
     id: 1,

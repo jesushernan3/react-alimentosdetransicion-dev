@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ContextoTienda } from "../context/ContextoTienda";
 import Titulos from "./Titulos";
-import ProductoItem from "./ProductoItem";
+import FichaProducto from "./FichaProducto";
 
 const UltimasColecciones = () => {
   const { productos } = useContext(ContextoTienda);
@@ -26,7 +26,7 @@ const UltimasColecciones = () => {
       {/* Renderizar Productos */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
         {UltimosProductos.map((item, index) => (
-          <ProductoItem
+          <FichaProducto
             key={index}
             id={item.id}
             imagen={item.imagen}

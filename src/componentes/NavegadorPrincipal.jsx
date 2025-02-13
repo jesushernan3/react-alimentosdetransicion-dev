@@ -5,7 +5,7 @@ import { ContextoTienda } from "../context/ContextoTienda";
 
 function NavegadorPrincipal() {
   const [visible, setVisible] = useState(false);
-  const { setMostrarBuscar } = useContext(ContextoTienda);
+  const { setMostrarBuscar, getCarritoCuenta } = useContext(ContextoTienda);
 
   return (
     <nav
@@ -27,6 +27,10 @@ function NavegadorPrincipal() {
         </NavLink>
         <NavLink to="/contacto" className="flex flex-col items-center gap-1">
           <p>Contacto</p>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        </NavLink>
+        <NavLink to="/recetas" className="flex flex-col items-center gap-1">
+          <p>Recetas</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
         {/* <NavLink to="/prueba" className="flex flex-col items-center gap-1">
@@ -64,7 +68,7 @@ function NavegadorPrincipal() {
             className="w-5 min-w-5"
           />
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
-            8
+            {getCarritoCuenta()}
           </p>
         </Link>
 

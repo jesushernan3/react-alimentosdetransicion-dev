@@ -2,7 +2,7 @@ import React, { useCallback, useContext } from "react";
 import { ContextoTienda } from "../context/ContextoTienda";
 import { Link } from "react-router-dom";
 
-const ProductoItem = ({
+const FichaProducto = ({
   id,
   imagen,
   nombre,
@@ -30,4 +30,4 @@ const ProductoItem = ({
   );
 };
 
-export default ProductoItem;
+export default FichaProducto;

@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { productos } from "../assets/assets";
+import { toast } from "react-toastify";
 
 export const ContextoTienda = createContext();
 
@@ -11,6 +12,11 @@ const ProveedorContextoTienda = (props) => {
   const [carritoItems, setCarritoItems] = useState({});
 
   const agregarACarrito = async (itemId, tamaño) => {
+    if (!tamaño) {
+      toast.error("Seleccionar tamaño");
+      return;
+    }
+
     let carritoData = structuredClone(carritoItems);
 
     if (carritoData[itemId]) {
@@ -26,9 +32,22 @@ const ProveedorContextoTienda = (props) => {
     setCarritoItems(carritoData);
   };
 
-  useEffect(() => {
-    console.log(carritoItems);
-  }, [carritoItems]);
+  const getCarritoCuenta = () => {
+    let totalCuenta = 0;
+    for (const items in carritoItems) {
+      for (const item in carritoItems[items]) {
+        try {
+          if (carritoItems[items][item] > 0) {
+            totalCuenta += carritoItems[items][item];
+          }
+        } catch (error) {}
+      }
+    }
+    return totalCuenta;
+  };
+  // useEffect(() => {
+  //   console.log(carritoItems);
+  // }, [carritoItems]);
 
   const valor = {
     productos,
@@ -40,6 +59,7 @@ const ProveedorContextoTienda = (props) => {
     setMostrarBuscar,
     carritoItems,
     agregarACarrito,
+    getCarritoCuenta,
   };
 
   return (
