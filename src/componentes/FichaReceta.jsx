@@ -1,9 +1,9 @@
-import React, { useCallback, useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const FichaCategoria = ({ id, imagen, nombre, categoria }) => {
+const FichaReceta = ({ id, imagen, nombre, categoria }) => {
   return (
-    <Link to={`/recetas/${categoria}`} className="min-h-350px block">
+    <Link to={`/recetas/${nombre}`} className="min-h-350px block">
       <div className="overflow-hidden min-h-42">
         <img
           className="hover:scale-110 transition easy-in-out"
@@ -16,4 +16,4 @@ const FichaCategoria = ({ id, imagen, nombre, categoria }) => {
   );
 };
 
-export default FichaCategoria;
+export default FichaReceta;

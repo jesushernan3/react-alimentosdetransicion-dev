@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { productos } from "../assets/assets";
+import { productos, categoriasRecetas, recetas } from "../assets/assets";
+import { RecetasAderezos } from "../assets/recetas/RecetasAderezos";
 import { toast } from "react-toastify";
 
 export const ContextoTienda = createContext();
@@ -51,6 +52,7 @@ const ProveedorContextoTienda = (props) => {
 
   const valor = {
     productos,
+    categoriasRecetas,
     currency,
     valor_envio,
     buscar,
@@ -60,6 +62,8 @@ const ProveedorContextoTienda = (props) => {
     carritoItems,
     agregarACarrito,
     getCarritoCuenta,
+    recetas,
+    RecetasAderezos,
   };
 
   return (

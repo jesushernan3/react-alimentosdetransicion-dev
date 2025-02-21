@@ -1,17 +1,26 @@
 import React from "react";
-import HeroGeneral from "../componentes/HeroGeneral";
+import RecetasCategoriasFichas from "../componentes/RecetasCategoriaFichas";
+import NuestraPolitica from "../componentes/NuestraPolitica";
+import { useParams } from "react-router-dom";
+import { assets } from "../assets/assets";
 
-const Recetas = () => {
+const PaginaRecetas = () => {
+  const { categoria } = useParams();
+
   return (
-    <div>
+    <div className="flex flex-col">
       {/* Hero */}
-      <div className="flex flex-col items-center w-full imagen-de-fondo h-100">
-        <p className="self-center text-5xl text-gray-200">RECETAS</p>
+      <div className="flex flex-col justify-center items-center w-full imagen-de-fondo h-[50vh]">
+        <p className="text-5xl text-gray-200">RECETAS</p>
       </div>
 
       {/* Seccion Categorias */}
+      <main className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+        <RecetasCategoriasFichas />
+        <NuestraPolitica />
+      </main>
     </div>
   );
 };
 
-export default Recetas;
+export default PaginaRecetas;
