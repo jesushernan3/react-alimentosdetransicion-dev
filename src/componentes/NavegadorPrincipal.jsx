@@ -7,6 +7,29 @@ function NavegadorPrincipal() {
   const [visible, setVisible] = useState(false);
   const { setMostrarBuscar, getCarritoCuenta } = useContext(ContextoTienda);
 
+  const NavLinks = [
+    {
+      id: 1,
+      name: "Productos",
+      link: "/productos",
+    },
+    {
+      id: 2,
+      name: "Nosotros",
+      link: "/nosotros",
+    },
+    {
+      id: 3,
+      name: "Contacto",
+      link: "/contacto",
+    },
+    {
+      id: 4,
+      name: "Recetas",
+      link: "/recetas",
+    },
+  ];
+
   return (
     <nav
       className="flex items-center justify-between p-5 font-medium"
@@ -17,7 +40,18 @@ function NavegadorPrincipal() {
       </Link>
 
       <ul className="hidden sm:flex gap-5 text-base text-gray-700">
-        <NavLink to="/productos" className="flex flex-col items-center gap-1">
+        {NavLinks.map(({ id, name, link }) => (
+          <NavLink
+            key={id}
+            to={link}
+            className="flex flex-col items-center gap-1"
+          >
+            <p>{name}</p>
+            <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          </NavLink>
+        ))}
+
+        {/*<NavLink to="/productos" className="flex flex-col items-center gap-1">
           <p>Productos</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
@@ -33,7 +67,7 @@ function NavegadorPrincipal() {
           <p>Recetas</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        {/* <NavLink to="/prueba" className="flex flex-col items-center gap-1">
+         <NavLink to="/prueba" className="flex flex-col items-center gap-1">
           <p>PRUEBA</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink> */}

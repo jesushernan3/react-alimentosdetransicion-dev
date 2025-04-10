@@ -7,22 +7,12 @@ import { ContextoTienda } from "../context/ContextoTienda";
 
 const PaginaCategoriasRecetas = () => {
   const { categoria } = useParams();
-  const { RecetasAderezos } = useContext(ContextoTienda);
-  const [SubRecetas, setSubRecetas] = useState([]);
-
-  // const traerProductoData = async () => {
-  //   categoriaRecetas.map((item) => {
-  //     if (item.categoria === categoria) {
-  //       setCategoriasData(item);
-  //       setImagen(item.imagen[0]);
-  //       return null;
-  //     }
-  //   });
-  // };
+  const { recetasMap } = useContext(ContextoTienda);
+  const [recetas, setRecetas] = useState([]);
 
   useEffect(() => {
-    setSubRecetas(RecetasAderezos.slice(0, 10));
-  }, []);
+    if (recetasMap[categoria]) setRecetas(recetasMap[categoria]);
+  }, [categoria]);
 
   return (
     <div className="flex flex-col">
@@ -49,7 +39,7 @@ const PaginaCategoriasRecetas = () => {
           </p>
         </section>
         <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
-          {SubRecetas.map((item, index) => (
+          {recetas.map((item, index) => (
             <FichaReceta
               key={index}
               id={item.id}

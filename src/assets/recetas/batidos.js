@@ -2,10 +2,10 @@ import AderezoDePalta from "./AderezoDePalta.png";
 import AderezoDeCañamo from "./AderezoCañamo.png";
 import AderezoTipoQuesoCremoso from "./AderezoTipoQuesoCremoso.png";
 
-export const RecetasAderezos = [
+export const recetas = [
   {
     id: 1,
-    nombre: "Aderezo Cremoso de Palta",
+    nombre: "Batido Cremoso de Palta",
     descripcion: "hermoso aderezo de palta para todo tipo de comidas",
     imagen: [AderezoDePalta],
     ingredientes: [
@@ -23,7 +23,7 @@ export const RecetasAderezos = [
   },
   {
     id: 2,
-    nombre: "Aderezo Ranchero de Cañamo",
+    nombre: "Batido Ranchero de Cañamo",
     descripcion: "hermoso aderezo de cañamo para todo tipo de comidas",
     imagen: [AderezoDeCañamo],
     ingredientes: [

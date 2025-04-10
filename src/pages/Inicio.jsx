@@ -10,7 +10,7 @@ function PaginaInicio() {
       <HeroPrincipal />
       <main className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         <section className="text-center py-8 text-3xl">
-          <h2 className="mt-10">Propuesta</h2>
+          <h2 className="mt-10 text-2xl bg-red-300">Propuesta</h2>
           <img
             src={assets.iconoAdornoCuchillos}
             alt="icono"
